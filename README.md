@@ -1,8 +1,13 @@
 # Exercice TP TodoList Angular :
 
-### Objectif:
+## Objectif:
 
 Créer une application Angular qui permet de créer, afficher et modifier une liste de tâche à faire (todolist).
+
+
+
+***
+
 
 
 ### TodoListApp
