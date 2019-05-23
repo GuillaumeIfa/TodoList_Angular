@@ -28,11 +28,9 @@
   <input type="text" [(ngModel)]="todolist[index].text" *ngIf="toggleInput" value="{{ todolist[index].text }}">
 </ng-template>
 <ng-template #blockDesc>
-	<div class="row">
-		<input type="text" [(ngModel)]="todolist[index].description" *ngIf="toggleInput" value="{{ todolist[index].description }}">
-		<button class="btn btn-outline-dark btnRight" *ngIf="toggleInput" (click)="toggleInputFalse()">
-		  <fa name=check></fa>
-		</button>
-	</div>
+	<input type="text" [(ngModel)]="todolist[index].description" *ngIf="toggleInput" value="{{ todolist[index].description }}">
+	<button class="btn btn-outline-dark " *ngIf="toggleInput" (click)="toggleInputFalse()">
+		<fa name=check></fa>
+	</button>
 </ng-template>
 <app-form></app-form>
