@@ -1,0 +1,48 @@
+body {
+	background-color: gainsboro !important;
+}
+
+h4 {
+	padding-bottom: 5px;
+}
+
+.btn {
+	margin: 5px;
+}
+
+.btnRight {
+	float: right;
+}
+
+.formulaire {
+	margin-bottom: 5vh;
+}
+
+
+
+
+
+/**************************************************/
+
+/* code volé à cette adresse: https://codingwithspike.wordpress.com/2014/11/16/fancy-css-checkboxes-with-fontawesome/ */
+
+.coolInput input[type="checkbox"],
+.coolInput .checked {
+    display: none;
+}
+
+.coolInput input[type="checkbox"],
+.coolInput .checked {
+	display: none;
+}
+ 
+.coolInput input[type="checkbox"]:checked ~ .checked
+{
+	display: inherit;
+}
+ 
+.coolInput input[type="checkbox"]:checked ~ .unchecked
+{
+	display: none;
+}
+
