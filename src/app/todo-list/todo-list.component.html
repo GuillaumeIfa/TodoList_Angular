@@ -1,31 +1,30 @@
 
-  <!-- <img src="..." class="card-img-top" alt="..."> -->
-  <div class="card border-dark shadow-lg mx-auto col-sm-10 col-md-8">
-	<ul class="list-group list-group-flush">
-	  <li *ngFor="let todo of todolist, index as i" class="list-group-item">
-		<i class="fas fa-thumbtack"></i>
-		<b> Tâche {{ i+1 }}: </b> <span [ngStyle]="{ 'text-decoration': todo.done ? 'line-through' : '', 'color': todo.done ? 'grey' : '' }" *ngIf="i != index; else blockText" (dblclick)="toInput(i)">{{ todolist[i].text }}</span>
-		<br>
-		<i class="fas fa-file-export"></i>
-		<b> Description: </b> <span [ngStyle]="{ 'text-decoration': todo.done ? 'line-through' : '', 'color': todo.done ? 'grey' : '' }" *ngIf="i != index; else blockDesc" (dblclick)="toInput(i)"><i>{{ todo.description }}</i></span>
-		<br>
-		<label class="coolInput">
-			<input type="checkbox" [(ngModel)]="todo.done">
-			<i class="far fa-circle unchecked"></i>
-			<i class="fas fa-check-circle checked"></i>
-			<b>{{ (todo.done) ? ' Fait !  ' : ' À faire '}}</b>
-			<fa name="beer" *ngIf="todo.done"></fa>
-		</label>
-		<div>
-		</div>
-		<button class="btn btn-outline-dark btnRight" (click)="supprimer(i)"><fa name="trash-alt"></fa></button>
-		<button class="btn btn-outline-dark btnRight" (click)="toInput(i)"><fa name="edit"></fa></button>
-	  </li>
-	</ul>
+	<div class="card border-dark shadow-lg mx-auto col-sm-10 col-md-8">
+		<ul class="list-group list-group-flush">
+			<li *ngFor="let todo of todolist, index as i" class="list-group-item">
+				<i class="fas fa-thumbtack"></i>
+				<b> Tâche {{ i+1 }}: </b> <span [ngStyle]="{ 'text-decoration': todo.done ? 'line-through' : '', 'color': todo.done ? 'grey' : '' }" *ngIf="i != index; else blockText" (dblclick)="toInput(i)">{{ todolist[i].text }}</span>
+				<br>
+				<i class="fas fa-file-export"></i>
+				<b> Description: </b> <span [ngStyle]="{ 'text-decoration': todo.done ? 'line-through' : '', 'color': todo.done ? 'grey' : '' }" *ngIf="i != index; else blockDesc" (dblclick)="toInput(i)"><i>{{ todo.description }}</i></span>
+				<br>
+					<label class="coolInput">
+						<input type="checkbox" [(ngModel)]="todo.done">
+						<i class="far fa-circle unchecked"></i>
+						<i class="fas fa-check-circle checked"></i>
+						<b>{{ (todo.done) ? ' Fait !  ' : ' À faire '}}</b>
+						<fa name="beer" *ngIf="todo.done"></fa>
+					</label>
+				<div>
+				</div>
+				<button class="btn btn-outline-dark btnRight" (click)="supprimer(i)"><fa name="trash-alt"></fa></button>
+				<button class="btn btn-outline-dark btnRight" (click)="toInput(i)"><fa name="edit"></fa></button>
+			</li>
+		</ul>
   </div>
 <br>
 <ng-template #blockText>
-  <input type="text" [(ngModel)]="todolist[index].text" *ngIf="toggleInput" value="{{ todolist[index].text }}">
+	<input type="text" [(ngModel)]="todolist[index].text" *ngIf="toggleInput" value="{{ todolist[index].text }}">
 </ng-template>
 <ng-template #blockDesc>
 	<input type="text" [(ngModel)]="todolist[index].description" *ngIf="toggleInput" value="{{ todolist[index].description }}">
