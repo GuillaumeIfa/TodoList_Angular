@@ -5,6 +5,8 @@
 Créer une application Angular qui permet de créer, afficher et modifier une liste de tâche à faire (todolist).
 
 
+![alt text](./CaptureEcran.png "Capture d'écran")
+
 
 ***
 
